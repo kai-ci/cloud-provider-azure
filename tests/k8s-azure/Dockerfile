@@ -13,7 +13,7 @@ RUN git clone https://github.com/kubernetes/kubernetes . \
 RUN rm -rf _output/local/go
 
 FROM golang:1.8.3-stretch AS build_acs-engine
-ARG ACSENGINE_VERSION=v0.14.0
+ARG ACSENGINE_VERSION=v0.17.2
 WORKDIR /go/src/github.com/Azure/acs-engine
 RUN git clone https://github.com/Azure/acs-engine . \
     && git checkout -b temp $ACSENGINE_VERSION \
